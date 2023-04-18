@@ -12,9 +12,7 @@ button {
   height: 50px;
   width: 50px;
   margin: 5px;
-  border-radius: 4px;
-  background-color: rgb(175, 175, 175);
-  font-size: 16px;
+  font-size: 24px;
 }
 
 .display-row {
@@ -24,4 +22,29 @@ button {
 .display {
   flex-grow: 1;
   justify-content: flex-end;
+}
+
+.number {
+  border: 1px solid rgb(24, 200, 186);
+  border-radius: 10px;
+}
+
+.operator {
+  border: 1px solid rgb(187, 183, 84);
+  border-radius: 10px;
+}
+
+.decimal {
+  border: 1px solid gold;
+  border-radius: 10px;
+}
+
+.equal {
+  border: 1px solid pink;
+  border-radius: 10px;
+}
+
+.clear {
+  border: 1px solid rgb(203, 16, 16);
+  border-radius: 10px;
 }
