@@ -20,7 +20,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   operators.forEach((op) => op.addEventListener("click", (e) => {
     handleOperator(e.target.textContent)
+    previousScreen.textContent = previousValue + " " + operator;
+    currentScreen.textContent = currentValue;
   }))
+
+  clear.addEventListener("click", () => {
+    previousValue = '';
+    currentValue = '';
+    operator = '';
+    previousScreen.textContent = currentValue;
+    currentScreen.textContent = currentValue;
+  })
+
+  equal.addEventListener("click", () => {
+    calculate();
+  })
 })
 
 function handleNumber(number) {
@@ -30,5 +44,12 @@ function handleNumber(number) {
 }
 
 function handleOperator(op) {
-  console.log(op);
+  operator = op;
+  previousValue = currentValue;
+  currentValue = '';
+}
+
+function calculate() {
+  previousValue = Number(previousValue);
+  currentValue = Number(currentValue);
 }
