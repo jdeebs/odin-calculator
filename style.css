@@ -17,11 +17,19 @@ button {
 
 .display-row {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px;
 }
 
 .display {
-  flex-grow: 1;
+  display: flex;
+  align-items: center;
   justify-content: flex-end;
+  height: 50px;
+  flex-grow: 1;
+  border: 1px solid salmon;
+  border-radius: 10px;
 }
 
 .number {
@@ -29,9 +37,17 @@ button {
   border-radius: 10px;
 }
 
+.number:hover {
+  background-color: rgb(24, 200, 186);
+}
+
 .operator {
-  border: 1px solid rgb(187, 183, 84);
+  border: 1px solid slateblue;
   border-radius: 10px;
+}
+
+.operator:hover {
+  background-color: slateblue;
 }
 
 .decimal {
@@ -39,12 +55,27 @@ button {
   border-radius: 10px;
 }
 
+.decimal:hover {
+  background-color: gold;
+}
+
 .equal {
   border: 1px solid pink;
   border-radius: 10px;
 }
 
+.equal:hover {
+  background-color: pink;
+}
+
 .clear {
   border: 1px solid rgb(203, 16, 16);
   border-radius: 10px;
+  margin: 0;
+  margin-left: 14px;
 }
+
+.clear:hover {
+  background-color: rgb(203, 16, 16);
+}
+
