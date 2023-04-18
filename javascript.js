@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   equal.addEventListener("click", () => {
     calculate();
+    previousScreen.textContent = '';
+    currentScreen.textContent = previousValue;
   })
 })
 
@@ -52,4 +54,22 @@ function handleOperator(op) {
 function calculate() {
   previousValue = Number(previousValue);
   currentValue = Number(currentValue);
+
+  if (operator === "+") {
+    previousValue += currentValue;
+  } else if (operator === "-") {
+    previousValue -= currentValue;
+  } else if (operator === "x") {
+    previousValue *= currentValue;
+  } else {
+    previousValue /= currentValue;
+  }
+
+  previousValue = roundNumber(previousValue);
+  previousValue = previousValue.toString();
+  currentValue = previousValue.toString();
+}
+
+function roundNumber(number) {
+  return Math.round(number * 1000) / 1000;
 }
